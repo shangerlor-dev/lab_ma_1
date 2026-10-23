@@ -4,7 +4,7 @@
 ## Student Information
 - Name: SHANGER LOR
 - Section: ICLX3
-- Student ID: 241-01094
+- Student ID: 241-01094git add README.md
 
 ## Activity 2 - Water Tracker
 ### Observation: setState()
@@ -14,7 +14,7 @@
 [When the goal changes from 8 to 6, the target number of glasses decreases. The progress indicator updates according to the new goal, and the tracker shows progress toward the revised target.]
 
 ### Last 3 build() logs
-[Paste the last three actual build() log lines from the Debug Console here.]
+[Paste the last three actual build() log lines from the Debug Consolegit status here.]
 ## Activity 3 - Weather Dashboard
 ### Observation: Removing Expanded
 [When Expanded was removed, the layout changed because the affected widget no longer occupied its equal share of the available horizontal space. Depending on the layout constraints, this could cause uneven spacing or a layout overflow. After restoring Expanded, the widgets shared the available space as intended.]
@@ -40,4 +40,4 @@
 10. [The _isDark variable stores the current dark-mode setting. The switch calls _setDark() when its value changes. The method uses setState() to update _isDark, causing the app to rebuild. The themeMode property then selects either ThemeMode.dark or ThemeMode.light.]
 
 ## GitHub Repository
-[].
+[https://github.com/shangerlor-dev/lab_ma_1].
