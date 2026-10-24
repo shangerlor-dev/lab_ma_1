@@ -15,7 +15,9 @@ class CafeMenuApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Campus Café Menu',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: studentColor),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: studentColor,
+        ),
         useMaterial3: true,
       ),
       home: const CafeMenuPage(),
@@ -69,7 +71,7 @@ class CafeMenuPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Activity 4 - Campus Café'),
+        title: const Text('Campus Café'),
         backgroundColor: studentColor,
         foregroundColor: Colors.white,
       ),
@@ -83,7 +85,11 @@ class CafeMenuPage extends StatelessWidget {
                 color: Colors.brown.shade100,
                 child: const Column(
                   children: [
-                    Icon(Icons.local_cafe, size: 30, color: Colors.brown),
+                    Icon(
+                      Icons.local_cafe,
+                      size: 30,
+                      color: Colors.brown,
+                    ),
                     SizedBox(height: 8),
                     Text(
                       'Campus Café',
@@ -124,7 +130,7 @@ class CafeMenuPage extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 10),
               gridDelegate:
                   const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 3,
+                crossAxisCount: 2,
                 crossAxisSpacing: 10,
                 mainAxisSpacing: 10,
                 childAspectRatio: 0.9,
@@ -161,12 +167,25 @@ class CafeMenuPage extends StatelessWidget {
                         ),
                       ),
                       if (item['bestSeller'] as bool)
-                        const Positioned(
+                        Positioned(
                           top: 4,
                           right: 4,
-                          child: Icon(
-                            Icons.star,
-                            color: Colors.amber,
+                          child: Container(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 6,
+                              vertical: 4,
+                            ),
+                            decoration: BoxDecoration(
+                              color: Colors.amber.shade100,
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                            child: const Text(
+                              'BEST SELLER',
+                              style: TextStyle(
+                                fontSize: 9,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
                           ),
                         ),
                     ],

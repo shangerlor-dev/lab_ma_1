@@ -1,30 +1,16 @@
-// This is a basic Flutter widget test.
-//
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility in the flutter_test package. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
 
-import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-import 'package:lab_ma_1/main.dart';
+import 'package:lab_ma_1/activity5_theme_components.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+  testWidgets('Settings app displays preferences', (WidgetTester tester) async {
+    await tester.pumpWidget(const SettingsApp());
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
-
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
-
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    expect(find.text('Settings'), findsOneWidget);
+    expect(find.text('Preferences'), findsOneWidget);
+    expect(find.text('Dark Mode'), findsOneWidget);
+    expect(find.text('Notifications'), findsOneWidget);
+    expect(find.text('Location Services'), findsOneWidget);
+    expect(find.text('Save Settings'), findsOneWidget);
   });
 }
